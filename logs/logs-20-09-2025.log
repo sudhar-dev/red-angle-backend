@@ -16,3 +16,44 @@
 {"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T06:43:46.697Z"}
 {"level":"info","message":"Add Employee Controller =======> ","timestamp":"2025-09-20T06:43:50.714Z"}
 {"level":"info","message":"Mail sending Log ","timestamp":"2025-09-20T06:43:50.964Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T06:52:20.509Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T06:52:29.736Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T06:52:38.287Z"}
+{"level":"info","message":"Controller: Add Employee","timestamp":"2025-09-20T07:00:44.816Z"}
+{"level":"info","message":"Employee created: thiru1@gmail.com","timestamp":"2025-09-20T07:00:44.891Z"}
+{"level":"info","message":"Credentials created for employee: thiru1@gmail.com","timestamp":"2025-09-20T07:00:44.893Z"}
+{"level":"info","message":"Mail sending Log ","timestamp":"2025-09-20T07:00:44.893Z"}
+{"level":"info","message":"Email sent to thiru1@gmail.com: true","timestamp":"2025-09-20T07:00:49.384Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T08:47:47.312Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T09:01:49.089Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T09:02:00.711Z"}
+{"level":"info","message":"Fetched all employees: 3","timestamp":"2025-09-20T09:02:00.810Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T09:02:00.837Z"}
+{"level":"info","message":"Fetched all employees: 3","timestamp":"2025-09-20T09:02:00.840Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T09:02:11.361Z"}
+{"level":"info","message":"Fetched all employees: 3","timestamp":"2025-09-20T09:02:11.413Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T09:02:11.436Z"}
+{"level":"info","message":"Fetched all employees: 3","timestamp":"2025-09-20T09:02:11.440Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T09:02:55.650Z"}
+{"level":"info","message":"Fetched all employees: 3","timestamp":"2025-09-20T09:02:55.733Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T09:02:55.767Z"}
+{"level":"info","message":"Fetched all employees: 3","timestamp":"2025-09-20T09:02:55.774Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T09:02:57.426Z"}
+{"level":"info","message":"Fetched all employees: 3","timestamp":"2025-09-20T09:02:57.437Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T09:02:57.444Z"}
+{"level":"info","message":"Fetched all employees: 3","timestamp":"2025-09-20T09:02:57.448Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T09:03:13.684Z"}
+{"level":"info","message":"Fetched all employees: 3","timestamp":"2025-09-20T09:03:13.713Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T09:03:13.727Z"}
+{"level":"info","message":"Fetched all employees: 3","timestamp":"2025-09-20T09:03:13.739Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T09:03:23.271Z"}
+{"level":"info","message":"Fetched all employees: 3","timestamp":"2025-09-20T09:03:23.274Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T09:03:23.286Z"}
+{"level":"info","message":"Fetched all employees: 3","timestamp":"2025-09-20T09:03:23.293Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T09:32:25.268Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T09:32:30.588Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T09:32:30.601Z"}
+{"level":"info","message":"Fetched all employees: 3","timestamp":"2025-09-20T09:32:30.697Z"}
+{"level":"info","message":"Fetched all employees: 3","timestamp":"2025-09-20T09:32:30.718Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T09:35:41.250Z"}
+{"level":"info","message":"Fetched all employees: 3","timestamp":"2025-09-20T09:35:41.269Z"}
