@@ -114,3 +114,114 @@
 {"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T11:16:06.467Z"}
 {"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T11:16:06.478Z"}
 {"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T11:16:06.481Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T11:22:07.964Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T11:22:07.991Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T11:22:08.003Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T11:22:08.007Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T11:23:00.719Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T11:23:00.742Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T11:23:00.749Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T11:23:00.753Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T11:23:08.019Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T11:23:08.022Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T11:23:08.033Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T11:23:08.041Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T11:31:02.591Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T11:31:02.612Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T11:31:02.622Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T11:31:02.624Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T11:35:44.653Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T11:35:44.693Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T11:35:44.705Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T11:35:44.709Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T11:37:04.461Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T11:37:04.494Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T11:37:06.581Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T11:37:06.583Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T11:43:23.531Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T11:43:23.548Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T11:43:23.554Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T11:43:23.556Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T11:44:15.644Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T11:44:22.547Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T11:44:37.625Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T11:44:55.615Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T11:45:10.814Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T11:45:24.610Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T11:45:35.729Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T11:45:45.217Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T11:45:51.679Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T11:46:05.393Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T11:46:17.903Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T11:46:31.497Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T11:46:51.038Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T11:46:59.632Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T11:47:09.233Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T11:58:59.896Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T11:59:13.396Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T11:59:38.632Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T11:59:50.593Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T12:00:00.324Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T12:00:26.760Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T12:00:50.556Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T12:01:06.608Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T12:01:27.343Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T12:02:01.114Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T12:02:18.820Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T12:02:36.928Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T12:30:23.221Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T12:30:36.298Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T12:30:42.787Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T12:30:50.319Z"}
+{"level":"error","message":"Server not running ---  Invalid path: api/v1/routes/login","name":"AssertError","stack":"AssertError: Invalid path: api/v1/routes/login\n    at exports.Router.internals.Router.internals.Router.analyze (/home/sudharshan/Desktop/RedAngleSoftware/red-angle-backend/node_modules/@hapi/call/lib/index.js:208:10)\n    at new module.exports.internals.Route (/home/sudharshan/Desktop/RedAngleSoftware/red-angle-backend/node_modules/@hapi/hapi/lib/route.js:98:44)\n    at internals.Server._addRoute (/home/sudharshan/Desktop/RedAngleSoftware/red-angle-backend/node_modules/@hapi/hapi/lib/server.js:525:23)\n    at internals.Server.route (/home/sudharshan/Desktop/RedAngleSoftware/red-angle-backend/node_modules/@hapi/hapi/lib/server.js:518:22)\n    at loginRoutes.<anonymous> (/home/sudharshan/Desktop/RedAngleSoftware/red-angle-backend/src/api/login/routes.ts:7:12)\n    at Generator.next (<anonymous>)\n    at /home/sudharshan/Desktop/RedAngleSoftware/red-angle-backend/src/api/login/routes.ts:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (/home/sudharshan/Desktop/RedAngleSoftware/red-angle-backend/src/api/login/routes.ts:4:12)\n    at loginRoutes.register (/home/sudharshan/Desktop/RedAngleSoftware/red-angle-backend/src/api/login/routes.ts:16:16)","timestamp":"2025-09-20T12:36:45.386Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T12:39:00.880Z"}
+{"level":"info","message":"Controller: Login Cont","timestamp":"2025-09-20T12:39:27.987Z"}
+{"level":"error","message":"Login repository error: Database query failed : column \"employee_id\" does not exist","stack":"Error: Database query failed : column \"employee_id\" does not exist\n    at /home/sudharshan/Desktop/RedAngleSoftware/red-angle-backend/src/helper/db.ts:24:11\n    at Generator.throw (<anonymous>)\n    at rejected (/home/sudharshan/Desktop/RedAngleSoftware/red-angle-backend/src/helper/db.ts:6:65)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-09-20T12:39:28.078Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T12:40:00.412Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T12:41:56.014Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T12:42:08.963Z"}
+{"level":"info","message":"Controller: Login Cont","timestamp":"2025-09-20T12:42:12.713Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T12:43:11.541Z"}
+{"level":"info","message":"Controller: Login Cont","timestamp":"2025-09-20T12:43:13.225Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T12:43:38.245Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T12:46:03.002Z"}
+{"level":"info","message":"Controller: Login Cont","timestamp":"2025-09-20T12:46:04.518Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T12:47:19.026Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T12:47:19.090Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T12:47:19.115Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T12:47:19.118Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T12:47:27.945Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T12:47:27.947Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T12:47:29.199Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T12:47:29.201Z"}
+{"level":"info","message":"Controller: Login Cont","timestamp":"2025-09-20T12:48:22.704Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T12:48:55.043Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T12:49:05.290Z"}
+{"level":"info","message":"Controller: Login Cont","timestamp":"2025-09-20T12:49:16.072Z"}
+{"level":"info","message":"Controller: Login Cont","timestamp":"2025-09-20T12:58:20.778Z"}
+{"level":"info","message":"Controller: Login Cont","timestamp":"2025-09-20T12:58:36.005Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T12:58:43.559Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T12:58:43.568Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T12:58:43.582Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T12:58:43.585Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T13:04:24.212Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T13:04:24.261Z"}
+{"level":"info","message":"Controller: Login Cont","timestamp":"2025-09-20T13:06:55.545Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T13:13:58.885Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T13:13:58.907Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T13:13:58.923Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T13:13:58.928Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T13:14:00.439Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T13:14:00.443Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T13:14:00.454Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T13:14:00.456Z"}
+{"level":"info","message":"Controller: Get Employee by ID 2","timestamp":"2025-09-20T13:26:50.541Z"}
+{"level":"info","message":"Fetched employee: ID 2","timestamp":"2025-09-20T13:26:50.569Z"}
+{"level":"info","message":"Controller: Get Employee by ID 2","timestamp":"2025-09-20T13:26:50.576Z"}
+{"level":"info","message":"Fetched employee: ID 2","timestamp":"2025-09-20T13:26:50.581Z"}
+{"level":"info","message":"Controller: Get Employee by ID 2","timestamp":"2025-09-20T13:26:58.446Z"}
+{"level":"info","message":"Fetched employee: ID 2","timestamp":"2025-09-20T13:26:58.448Z"}
+{"level":"info","message":"Controller: Get Employee by ID 2","timestamp":"2025-09-20T13:27:28.198Z"}
+{"level":"info","message":"Fetched employee: ID 2","timestamp":"2025-09-20T13:27:28.222Z"}
+{"level":"info","message":"Controller: Get Employee by ID 2","timestamp":"2025-09-20T13:27:28.230Z"}
+{"level":"info","message":"Fetched employee: ID 2","timestamp":"2025-09-20T13:27:28.242Z"}
