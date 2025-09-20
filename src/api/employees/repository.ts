@@ -139,17 +139,25 @@ export class employeeRepository {
   // UPDATE employee
   public async updateEmployee(id: number, updateData: any): Promise<any> {
     try {
-      // Update fields dynamically
+      // Special handling for JSON fields
+      if (updateData.skills) {
+        updateData.skills = JSON.stringify(updateData.skills);
+      }
+
+      // Build dynamic SET clause
       const fields = Object.keys(updateData)
         .map((key, idx) => `"${key}"=$${idx + 2}`)
         .join(", ");
       const values = [id, ...Object.values(updateData)];
+
       const query = `UPDATE public.employees SET ${fields} WHERE id=$1 RETURNING *`;
       const result = await executeQuery(query, values);
+
       if (result.length === 0) {
         logger.warn(`Employee update failed, not found: ID ${id}`);
         return { success: false, message: "Employee not found" };
       }
+
       logger.info(`Employee updated: ID ${id}`);
       return { success: true, data: result[0] };
     } catch (error) {
