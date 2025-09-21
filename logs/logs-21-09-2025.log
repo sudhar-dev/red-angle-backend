@@ -86,3 +86,27 @@
 {"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T06:54:53.121Z"}
 {"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T06:56:20.757Z"}
 {"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T06:56:32.942Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T07:31:57.417Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T07:32:17.480Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T07:32:25.191Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T07:32:41.737Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T07:32:55.032Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T07:33:04.372Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T07:33:22.728Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T07:33:32.066Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T07:33:48.698Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T07:34:07.505Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T07:34:24.106Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T07:35:03.200Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T07:35:26.190Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T07:37:28.113Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T07:37:39.422Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T07:37:46.173Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T07:38:04.867Z"}
+{"level":"info","message":"Controller: Update Leads","timestamp":"2025-09-21T07:39:20.907Z"}
+{"code":"42P10","file":"plancat.c","length":148,"level":"error","line":"915","message":"Repository Error: Update Leads there is no unique or exclusion constraint matching the ON CONFLICT specification","name":"error","routine":"infer_arbiter_indexes","severity":"ERROR","stack":"error: there is no unique or exclusion constraint matching the ON CONFLICT specification\n    at /home/sudharshan/Desktop/RedAngleSoftware/red-angle-backend/node_modules/pg/lib/client.js:545:17\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-09-21T07:39:20.967Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T07:41:14.495Z"}
+{"level":"info","message":"Controller: Update Leads","timestamp":"2025-09-21T07:41:18.381Z"}
+{"code":"42P10","file":"plancat.c","length":148,"level":"error","line":"915","message":"Repository Error: Update Leads there is no unique or exclusion constraint matching the ON CONFLICT specification","name":"error","routine":"infer_arbiter_indexes","severity":"ERROR","stack":"error: there is no unique or exclusion constraint matching the ON CONFLICT specification\n    at /home/sudharshan/Desktop/RedAngleSoftware/red-angle-backend/node_modules/pg/lib/client.js:545:17\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-09-21T07:41:18.446Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T07:42:01.999Z"}
+{"level":"info","message":"Controller: Update Leads","timestamp":"2025-09-21T07:42:04.316Z"}
