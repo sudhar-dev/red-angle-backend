@@ -314,3 +314,92 @@
 {"count":2,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T15:30:53.142Z"}
 {"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T15:30:53.872Z"}
 {"count":2,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T15:30:53.873Z"}
+{"level":"info","message":"Controller: Punch In","timestamp":"2025-09-20T15:31:05.914Z"}
+{"emp":2,"id":3,"level":"info","message":"Repository: Punch In recorded","timestamp":"2025-09-20T15:31:05.932Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T15:31:05.941Z"}
+{"count":3,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T15:31:05.944Z"}
+{"level":"info","message":"Controller: Punch Out","timestamp":"2025-09-20T15:31:07.741Z"}
+{"emp":2,"id":3,"level":"info","message":"Repository: Punch Out recorded","timestamp":"2025-09-20T15:31:07.745Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T15:31:07.755Z"}
+{"count":3,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T15:31:07.757Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T15:32:35.147Z"}
+{"count":3,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T15:32:35.156Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T15:32:36.570Z"}
+{"count":3,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T15:32:36.572Z"}
+{"level":"info","message":"Controller: Punch In","timestamp":"2025-09-20T15:32:52.993Z"}
+{"emp":2,"id":4,"level":"info","message":"Repository: Punch In recorded","timestamp":"2025-09-20T15:32:53.009Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T15:32:53.106Z"}
+{"count":4,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T15:32:53.109Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T15:32:55.919Z"}
+{"count":4,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T15:32:55.920Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-20T15:48:49.254Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T15:49:10.840Z"}
+{"count":4,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T15:49:10.927Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T16:01:33.985Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T16:01:34.010Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-20T16:01:34.025Z"}
+{"level":"info","message":"Fetched all employees: 2","timestamp":"2025-09-20T16:01:34.030Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:08:43.792Z"}
+{"count":4,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:08:43.844Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:08:43.866Z"}
+{"count":4,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:08:43.874Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:08:59.504Z"}
+{"count":4,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:08:59.585Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:08:59.604Z"}
+{"count":4,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:08:59.615Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:09:58.070Z"}
+{"count":4,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:09:58.091Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:09:58.125Z"}
+{"count":4,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:09:58.135Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:12:41.603Z"}
+{"count":4,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:12:41.644Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:12:41.657Z"}
+{"count":4,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:12:41.667Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:13:03.004Z"}
+{"count":4,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:13:03.025Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:13:03.031Z"}
+{"count":4,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:13:03.033Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:14:08.497Z"}
+{"count":4,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:14:08.521Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:14:08.531Z"}
+{"count":4,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:14:08.534Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:14:13.356Z"}
+{"count":4,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:14:13.359Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:14:19.280Z"}
+{"count":4,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:14:19.282Z"}
+{"level":"info","message":"Controller: Punch In","timestamp":"2025-09-20T16:14:22.407Z"}
+{"emp":2,"id":37,"level":"info","message":"Repository: Punch In recorded","timestamp":"2025-09-20T16:14:22.412Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:14:22.432Z"}
+{"count":5,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:14:22.434Z"}
+{"level":"info","message":"Controller: Punch Out","timestamp":"2025-09-20T16:14:24.033Z"}
+{"emp":2,"id":37,"level":"info","message":"Repository: Punch Out recorded","timestamp":"2025-09-20T16:14:24.038Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:14:24.055Z"}
+{"count":5,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:14:24.057Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:14:53.257Z"}
+{"count":5,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:14:53.280Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:14:53.288Z"}
+{"count":5,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:14:53.292Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:15:56.361Z"}
+{"count":5,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:15:56.383Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:15:56.392Z"}
+{"count":5,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:15:56.395Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:17:27.890Z"}
+{"count":5,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:17:27.909Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:17:53.708Z"}
+{"count":5,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:17:53.731Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:19:36.912Z"}
+{"count":5,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:19:36.937Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:20:16.751Z"}
+{"count":5,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:20:16.769Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:20:22.385Z"}
+{"count":5,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:20:22.387Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:20:24.180Z"}
+{"count":5,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:20:24.182Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:21:07.514Z"}
+{"count":5,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:21:07.549Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:21:09.392Z"}
+{"count":5,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:21:09.397Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:21:09.405Z"}
+{"count":5,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:21:09.409Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-20T16:21:37.523Z"}
+{"count":5,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-20T16:21:37.543Z"}

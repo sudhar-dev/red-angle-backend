@@ -1,0 +1,28 @@
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T03:48:51.688Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-21T03:57:06.131Z"}
+{"count":5,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-21T03:57:06.207Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-21T04:02:24.216Z"}
+{"count":5,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-21T04:02:24.240Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-21T04:06:05.442Z"}
+{"count":5,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-21T04:06:05.465Z"}
+{"level":"info","message":"Controller: Get Attendance","timestamp":"2025-09-21T04:06:11.190Z"}
+{"count":5,"level":"info","message":"Repository: Attendance fetched","timestamp":"2025-09-21T04:06:11.193Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T04:32:21.569Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T04:32:27.546Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T04:33:30.778Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T04:33:52.727Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T04:34:06.519Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T04:34:17.030Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T04:34:49.692Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T04:35:15.358Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T04:35:44.981Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T04:35:54.046Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T04:36:22.962Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T04:36:36.381Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T04:36:54.012Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T04:37:11.785Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T04:37:29.549Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T04:37:35.567Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T04:37:43.459Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T04:38:55.541Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T04:39:35.643Z"}
