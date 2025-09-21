@@ -40,4 +40,25 @@ export class leadsRepository {
       client.release();
     }
   }
+
+  public async getLeadsRepoV1() {
+    const client: PoolClient = await getClient();
+
+    try {
+      const res = await client.query(`
+        SELECT 
+          id, created_time, full_name, email, phone_number, wedding_type, package, wedding_location, event_dates, "createdAt", "createdBy", "isDelete"
+        FROM public.wedding_leads
+        WHERE "isDelete" = false
+        ORDER BY id ASC
+      `);
+
+      return res.rows;
+    } catch (error) {
+      logger.error("Repository Error: Get Leads", error);
+      return [];
+    } finally {
+      client.release();
+    }
+  }
 }

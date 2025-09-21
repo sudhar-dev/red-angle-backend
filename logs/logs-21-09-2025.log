@@ -110,3 +110,21 @@
 {"code":"42P10","file":"plancat.c","length":148,"level":"error","line":"915","message":"Repository Error: Update Leads there is no unique or exclusion constraint matching the ON CONFLICT specification","name":"error","routine":"infer_arbiter_indexes","severity":"ERROR","stack":"error: there is no unique or exclusion constraint matching the ON CONFLICT specification\n    at /home/sudharshan/Desktop/RedAngleSoftware/red-angle-backend/node_modules/pg/lib/client.js:545:17\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-09-21T07:41:18.446Z"}
 {"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T07:42:01.999Z"}
 {"level":"info","message":"Controller: Update Leads","timestamp":"2025-09-21T07:42:04.316Z"}
+{"level":"info","message":"Controller: Update Leads","timestamp":"2025-09-21T07:44:33.547Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-21T08:51:48.872Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-21T08:51:57.343Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-21T08:51:57.435Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-21T08:52:45.825Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-21T08:52:45.927Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-21T08:52:50.387Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-21T08:52:50.437Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-21T08:53:00.433Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-21T08:53:00.480Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-21T08:53:30.369Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-21T08:53:30.435Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-21T08:53:48.058Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-21T08:53:48.145Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-21T08:54:16.463Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-21T08:54:16.500Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-21T08:54:37.539Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-21T08:54:37.576Z"}

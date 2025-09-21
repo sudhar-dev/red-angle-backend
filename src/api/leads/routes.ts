@@ -12,6 +12,12 @@ export class leadsRoutes implements IRoute {
         handler: controller.updateLeadsV1,
         config: { auth: false },
       },
+      {
+        method: "GET",
+        path: "/api/v1/leads/getAll",
+        handler: controller.getLeadsV1,
+        config: { auth: false },
+      },
     ]);
   }
 }

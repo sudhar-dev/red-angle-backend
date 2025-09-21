@@ -18,4 +18,17 @@ export class leadsController {
         .code(500);
     }
   };
+
+  public getLeadsV1 = async (_request: any, h: Hapi.ResponseToolkit) => {
+    logger.info("Controller: Get All Leads");
+    try {
+      const result = await this.repo.getLeadsRepoV1();
+      return h.response({ success: true, data: result }).code(200);
+    } catch (error) {
+      logger.error("Controller Error: Get Leads", error);
+      return h
+        .response({ success: false, message: "Internal Server Error" })
+        .code(500);
+    }
+  };
 }
