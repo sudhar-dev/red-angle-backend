@@ -1,6 +1,7 @@
 import { PoolClient } from "pg";
 import { getClient } from "../../helper/db";
 import logger from "../../helper/logger";
+import { sendEmail } from "../../helper/mail";
 
 export class leadsRepository {
   public async updateLeadsRepoV1(leadsData: any[]) {
@@ -473,51 +474,185 @@ export class leadsRepository {
   public async getAllQuotationsWithApproval() {
     const client: PoolClient = await getClient();
     try {
-      const res = await client.query(
-        `
-      SELECT 
-        l.id AS lead_id,
-        l.full_name,
-        l.email,
-        l.phone_number,
-        l.wedding_type,
-        l.package AS package_name,
-        l.wedding_location,
-        e.id AS event_id,
-        e.event_name,
-        e.date_time AS event_date,
-        p.amount AS payment_amount,
-        COALESCE(qa.status, 'Not Sent') AS approval_status,
-        json_agg(
-          json_build_object(
-            'quotation_id', q.id,
-            'service_name', q.service_name,
-            'description', q.description,
-            'quantity', q.quantity,
-            'price', q.price,
-            'total_amount', q.price * q.quantity
-          )
-        ) AS packages,
-        SUM(q.price * q.quantity) AS total_package_amount
-      FROM public.quotation_packages q
-      JOIN public.wedding_leads l ON q.lead_id = l.id
-      JOIN public.events e ON q.event_id = e.id
-      LEFT JOIN public.quotation_approvals qa 
-        ON q.lead_id = qa.lead_id AND q.event_id = qa.event_id
-      LEFT JOIN public.payments p 
-        ON q.lead_id = p.id AND q.event_id = p.event_id
-      GROUP BY l.id, l.full_name, l.email, l.phone_number, l.wedding_type, l.package, l.wedding_location,
-               e.id, e.event_name, e.date_time, p.amount, qa.status
-      ORDER BY e.date_time DESC;
-      `
-      );
-
+      const res = await client.query(`
+        SELECT 
+          l.id AS lead_id,
+          l.full_name,
+          l.email,
+          l.phone_number,
+          l.wedding_type,
+          l.package AS package_name,
+          l.wedding_location,
+          e.id AS event_id,
+          e.event_name,
+          e.date_time AS event_date,
+          p.amount AS payment_amount,
+          COALESCE(qa.status, 'Not Sent') AS approval_status,
+          json_agg(
+            json_build_object(
+              'quotation_id', q.id,
+              'service_name', q.service_name,
+              'description', q.description,
+              'quantity', q.quantity,
+              'price', q.price,
+              'total_amount', q.price * q.quantity
+            )
+          ) AS packages,
+          SUM(q.price * q.quantity) AS total_package_amount
+        FROM public.quotation_packages q
+        JOIN public.wedding_leads l ON q.lead_id = l.id
+        JOIN public.events e ON q.event_id = e.id
+        LEFT JOIN public.quotation_approvals qa 
+          ON q.lead_id = qa.lead_id AND q.event_id = qa.event_id
+        LEFT JOIN public.payments p 
+          ON q.lead_id = p.id AND q.event_id = p.event_id
+        GROUP BY l.id, l.full_name, l.email, l.phone_number, l.wedding_type, l.package, l.wedding_location,
+                 e.id, e.event_name, e.date_time, p.amount, qa.status
+        ORDER BY e.date_time DESC;
+      `);
       return res.rows;
     } catch (error) {
       logger.error("Repository Error: Fetch Quotations for Approval", error);
       throw error;
     } finally {
       client.release();
+    }
+  }
+
+  public async getQuotationByLeadId(lead_id: number) {
+    const client: PoolClient = await getClient();
+    try {
+      const res = await client.query(
+        `
+        SELECT 
+          l.full_name,
+          l.email,
+          l.phone_number,
+          l.wedding_type,
+          l.wedding_location,
+          e.event_name,
+          e.date_time AS event_date,
+          json_agg(
+            json_build_object(
+              'service_name', q.service_name,
+              'description', q.description,
+              'quantity', q.quantity,
+              'price', q.price,
+              'total_amount', q.price * q.quantity
+            )
+          ) AS packages,
+          SUM(q.price * q.quantity) AS total_package_amount
+        FROM public.quotation_packages q
+        JOIN public.wedding_leads l ON q.lead_id = l.id
+        JOIN public.events e ON q.event_id = e.id
+        WHERE l.id = $1
+        GROUP BY l.full_name, l.email, l.phone_number, l.wedding_type, l.wedding_location, e.event_name, e.date_time;
+      `,
+        [lead_id]
+      );
+
+      return res.rows[0];
+    } catch (error) {
+      logger.error("Repository Error: Get Quotation By Lead", error);
+      throw error;
+    } finally {
+      client.release();
+    }
+  }
+
+  public async sendQuotationToClient(lead_id: number): Promise<boolean> {
+    try {
+      const quotation = await this.getQuotationByLeadId(lead_id);
+
+      if (!quotation) throw new Error("Quotation not found");
+
+      const {
+        full_name,
+        email,
+        wedding_type,
+        wedding_location,
+        event_name,
+        event_date,
+        packages,
+        total_package_amount,
+      } = quotation;
+
+      // Build the HTML email
+      const htmlContent = `
+        <div style="font-family: Arial, sans-serif; color: #333;">
+          <h2 style="color: #d32f2f;">Red Angle Studio</h2>
+          <p>Dear <strong>${full_name}</strong>,</p>
+          <p>Greetings from <strong>Red Angle Studio</strong>! Please find below the quotation for your upcoming <strong>${wedding_type}</strong> event.</p>
+
+          <h3>Event Details</h3>
+          <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+              <td><strong>Event Name:</strong></td>
+              <td>${event_name}</td>
+            </tr>
+            <tr>
+              <td><strong>Event Date:</strong></td>
+              <td>${new Date(event_date).toLocaleDateString()}</td>
+            </tr>
+            <tr>
+              <td><strong>Location:</strong></td>
+              <td>${wedding_location}</td>
+            </tr>
+          </table>
+
+          <h3>Packages</h3>
+          <table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+            <thead>
+              <tr style="background-color: #f2f2f2;">
+                <th style="padding: 8px; border: 1px solid #ccc;">Service</th>
+                <th style="padding: 8px; border: 1px solid #ccc;">Description</th>
+                <th style="padding: 8px; border: 1px solid #ccc;">Quantity</th>
+                <th style="padding: 8px; border: 1px solid #ccc;">Price</th>
+                <th style="padding: 8px; border: 1px solid #ccc;">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${packages
+                .map(
+                  (pkg: any) => `
+                <tr>
+                  <td style="padding: 8px; border: 1px solid #ccc;">${
+                    pkg.service_name
+                  }</td>
+                  <td style="padding: 8px; border: 1px solid #ccc;">${
+                    pkg.description || "-"
+                  }</td>
+                  <td style="padding: 8px; border: 1px solid #ccc;">${
+                    pkg.quantity
+                  }</td>
+                  <td style="padding: 8px; border: 1px solid #ccc;">₹${
+                    pkg.price
+                  }</td>
+                  <td style="padding: 8px; border: 1px solid #ccc;">₹${
+                    pkg.total_amount
+                  }</td>
+                </tr>
+              `
+                )
+                .join("")}
+            </tbody>
+          </table>
+
+          <h3>Total Package Amount: ₹${total_package_amount}</h3>
+
+          <p>We look forward to making your event truly memorable!</p>
+          <p>Best Regards,<br/><strong>Red Angle Studio Team</strong></p>
+        </div>
+      `;
+
+      return await sendEmail({
+        to: email,
+        subject: `Quotation for Your ${wedding_type} Event - Red Angle Studio`,
+        html: htmlContent,
+      });
+    } catch (error) {
+      logger.error("Repository Error: Send Quotation To Client", error);
+      throw error;
     }
   }
 }

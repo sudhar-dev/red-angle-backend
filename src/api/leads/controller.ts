@@ -230,4 +230,37 @@ export class leadsController {
         .code(500);
     }
   };
+
+  public sendQuotationToClient = async (
+    request: any,
+    h: Hapi.ResponseToolkit
+  ) => {
+    try {
+      const lead_id = Number(request.params.lead_id);
+      if (!lead_id)
+        return h
+          .response({ success: false, message: "Lead ID is required" })
+          .code(400);
+
+      const result = await this.repo.sendQuotationToClient(lead_id);
+
+      if (result) {
+        return h
+          .response({
+            success: true,
+            message: "Quotation sent to client successfully",
+          })
+          .code(200);
+      } else {
+        return h
+          .response({ success: false, message: "Failed to send email" })
+          .code(500);
+      }
+    } catch (error) {
+      logger.error("Controller Error: Send Quotation To Client", error);
+      return h
+        .response({ success: false, message: "Internal server error" })
+        .code(500);
+    }
+  };
 }

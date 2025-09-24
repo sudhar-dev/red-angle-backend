@@ -86,6 +86,16 @@ export class leadsRoutes implements IRoute {
         handler: controller.getQuotationsForApproval,
         config: { auth: false },
       },
+
+      {
+        method: "POST",
+        path: "/api/v1/quotation/send-to-client/{lead_id}",
+        handler: controller.sendQuotationToClient,
+        options: {
+          description: "Send Quotation email to client",
+          tags: ["api", "quotation"],
+        },
+      },
     ]);
   }
 }
