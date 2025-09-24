@@ -181,4 +181,53 @@ export class leadsController {
         .code(500);
     }
   };
+
+  public sendQuotationForApproval = async (
+    request: any,
+    h: Hapi.ResponseToolkit
+  ) => {
+    const { lead_id, event_id } = request.payload;
+    try {
+      const result = await this.repo.sendQuotationForApprovalRepo(
+        lead_id,
+        event_id
+      );
+      return h.response({ success: true, data: result }).code(200);
+    } catch (error) {
+      logger.error("Controller Error: Send Quotation For Approval", error);
+      return h
+        .response({ success: false, message: "Internal server error" })
+        .code(500);
+    }
+  };
+
+  public getQuotationApprovalStatus = async (
+    _request: any,
+    h: Hapi.ResponseToolkit
+  ) => {
+    try {
+      const result = await this.repo.getQuotationApprovalStatusRepo();
+      return h.response({ success: true, data: result }).code(200);
+    } catch (error) {
+      logger.error("Controller Error: Get Quotation Approval Status", error);
+      return h
+        .response({ success: false, message: "Internal server error" })
+        .code(500);
+    }
+  };
+
+  public getQuotationsForApproval = async (
+    _request: any,
+    h: Hapi.ResponseToolkit
+  ) => {
+    try {
+      const result = await this.repo.getAllQuotationsWithApproval();
+      return h.response({ success: true, data: result }).code(200);
+    } catch (error) {
+      logger.error("Controller Error: Get Quotation Approval Status", error);
+      return h
+        .response({ success: false, message: "Internal server error" })
+        .code(500);
+    }
+  };
 }

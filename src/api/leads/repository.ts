@@ -387,17 +387,25 @@ export class leadsRepository {
         
         p.id AS payment_id,
         p.payment_type,
-        p.amount,
+        p.amount AS payment_amount,
         p.payment_date,
         p.notes AS payment_notes,
         p.created_at AS payment_created_at,
         
-        qp.id AS quotation_package_id,
-        qp.service_name,
-        qp.description,
-        qp.quantity,
-        qp.price,
-        qp.created_at AS quotation_created_at
+        -- Aggregate all quotation packages into an array of json objects
+        json_agg(
+          json_build_object(
+            'quotation_package_id', qp.id,
+            'service_name', qp.service_name,
+            'description', qp.description,
+            'quantity', qp.quantity,
+            'price', qp.price,
+            'created_at', qp.created_at
+          )
+        ) AS packages,
+        
+        -- Sum of all package prices
+        SUM(qp.price::numeric) AS total_package_amount
 
       FROM public.wedding_leads wl
       INNER JOIN public.events e
@@ -407,6 +415,10 @@ export class leadsRepository {
       INNER JOIN public.quotation_packages qp
         ON e.id = qp.event_id
       WHERE wl."isDelete" = false
+      GROUP BY 
+        wl.id, wl.full_name, wl.email, wl.phone_number, wl.wedding_type, wl.package, wl.wedding_location, wl.event_dates,
+        e.id, e.event_name, e.date_time, e.highlights, e.notes, e.created_at,
+        p.id, p.payment_type, p.amount, p.payment_date, p.notes, p.created_at
       ORDER BY e.created_at DESC;
     `);
 
@@ -414,6 +426,96 @@ export class leadsRepository {
     } catch (error) {
       logger.error("Repository Error: Get Quotation Created Leads", error);
       return [];
+    } finally {
+      client.release();
+    }
+  }
+
+  public async sendQuotationForApprovalRepo(lead_id: number, event_id: number) {
+    const client: PoolClient = await getClient();
+    try {
+      const status = "Pending Approval";
+      const res = await client.query(
+        `INSERT INTO quotation_approvals (lead_id, event_id, status)
+       VALUES ($1, $2, $3)
+       ON CONFLICT (lead_id, event_id)
+       DO UPDATE SET status = EXCLUDED.status;`,
+        [lead_id, event_id, status]
+      );
+      return res.rows[0];
+    } catch (error) {
+      logger.error("Repository Error: Send Quotation For Approval", error);
+      throw error;
+    } finally {
+      client.release();
+    }
+  }
+
+  // Get approval status for leads
+  public async getQuotationApprovalStatusRepo() {
+    const client: PoolClient = await getClient();
+    try {
+      const res = await client.query(`
+            SELECT lead_id, event_id, status
+            FROM quotation_approvals
+        `);
+      return res.rows;
+    } catch (error) {
+      logger.error("Repository Error: Get Quotation Approval Status", error);
+      return [];
+    } finally {
+      client.release();
+    }
+  }
+
+  // repository/quotationApprovalRepository.t
+  // Get all quotations with approval status
+  public async getAllQuotationsWithApproval() {
+    const client: PoolClient = await getClient();
+    try {
+      const res = await client.query(
+        `
+      SELECT 
+        l.id AS lead_id,
+        l.full_name,
+        l.email,
+        l.phone_number,
+        l.wedding_type,
+        l.package AS package_name,
+        l.wedding_location,
+        e.id AS event_id,
+        e.event_name,
+        e.date_time AS event_date,
+        p.amount AS payment_amount,
+        COALESCE(qa.status, 'Not Sent') AS approval_status,
+        json_agg(
+          json_build_object(
+            'quotation_id', q.id,
+            'service_name', q.service_name,
+            'description', q.description,
+            'quantity', q.quantity,
+            'price', q.price,
+            'total_amount', q.price * q.quantity
+          )
+        ) AS packages,
+        SUM(q.price * q.quantity) AS total_package_amount
+      FROM public.quotation_packages q
+      JOIN public.wedding_leads l ON q.lead_id = l.id
+      JOIN public.events e ON q.event_id = e.id
+      LEFT JOIN public.quotation_approvals qa 
+        ON q.lead_id = qa.lead_id AND q.event_id = qa.event_id
+      LEFT JOIN public.payments p 
+        ON q.lead_id = p.id AND q.event_id = p.event_id
+      GROUP BY l.id, l.full_name, l.email, l.phone_number, l.wedding_type, l.package, l.wedding_location,
+               e.id, e.event_name, e.date_time, p.amount, qa.status
+      ORDER BY e.date_time DESC;
+      `
+      );
+
+      return res.rows;
+    } catch (error) {
+      logger.error("Repository Error: Fetch Quotations for Approval", error);
+      throw error;
     } finally {
       client.release();
     }
