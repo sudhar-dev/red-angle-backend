@@ -24,6 +24,24 @@ export class leadsRoutes implements IRoute {
         handler: controller.addNewLeadV1,
         config: { auth: false },
       },
+      {
+        method: "POST",
+        path: "/api/v1/leads/assign",
+        handler: controller.assignLeadsV1,
+        config: { auth: false },
+      },
+      {
+        method: "GET",
+        path: "/api/v1/leads/assignments",
+        handler: controller.getAssignmentsV1,
+        config: { auth: false },
+      },
+      {
+        method: "GET",
+        path: "/api/v1/leads/assigned",
+        handler: controller.getAssignedLeadsV1,
+        config: { auth: false },
+      },
     ]);
   }
 }

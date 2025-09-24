@@ -87,3 +87,87 @@
 {"level":"info","message":"Controller: Add New Lead","timestamp":"2025-09-24T10:43:38.398Z"}
 {"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T10:43:40.695Z"}
 {"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T10:43:40.749Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T10:48:40.557Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T10:48:40.634Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T11:08:05.798Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T11:08:05.917Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T11:08:43.480Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T11:08:43.562Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T11:11:35.629Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T11:11:35.811Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T11:11:41.427Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T11:11:41.446Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-24T11:11:47.441Z"}
+{"level":"info","message":"Fetched all employees: 1","timestamp":"2025-09-24T11:11:47.453Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-24T11:11:47.457Z"}
+{"level":"info","message":"Fetched all employees: 1","timestamp":"2025-09-24T11:11:47.458Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T11:35:04.307Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T11:35:04.520Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-24T11:35:27.838Z"}
+{"level":"info","message":"Fetched all employees: 1","timestamp":"2025-09-24T11:35:27.928Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-24T11:35:27.930Z"}
+{"level":"info","message":"Fetched all employees: 1","timestamp":"2025-09-24T11:35:27.932Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-24T11:37:27.812Z"}
+{"level":"info","message":"Fetched all employees: 1","timestamp":"2025-09-24T11:37:28.035Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-24T11:37:28.039Z"}
+{"level":"info","message":"Fetched all employees: 1","timestamp":"2025-09-24T11:37:28.042Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-24T11:40:05.998Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-24T11:40:31.574Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-24T11:40:48.061Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-24T11:42:46.467Z"}
+{"level":"info","message":"Fetched all employees: 1","timestamp":"2025-09-24T11:42:46.563Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-24T11:42:46.570Z"}
+{"level":"info","message":"Fetched all employees: 1","timestamp":"2025-09-24T11:42:46.574Z"}
+{"code":"42P10","file":"plancat.c","length":148,"level":"error","line":"945","message":"Repository Error: Assign Leads there is no unique or exclusion constraint matching the ON CONFLICT specification","name":"error","routine":"infer_arbiter_indexes","severity":"ERROR","stack":"error: there is no unique or exclusion constraint matching the ON CONFLICT specification\n    at D:\\RedAngle\\red-angle-backend\\node_modules\\pg\\lib\\client.js:545:17\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2025-09-24T11:42:48.181Z"}
+{"code":"42P10","file":"plancat.c","length":148,"level":"error","line":"945","message":"Repository Error: Assign Leads there is no unique or exclusion constraint matching the ON CONFLICT specification","name":"error","routine":"infer_arbiter_indexes","severity":"ERROR","stack":"error: there is no unique or exclusion constraint matching the ON CONFLICT specification\n    at D:\\RedAngle\\red-angle-backend\\node_modules\\pg\\lib\\client.js:545:17\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2025-09-24T11:43:35.864Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T11:58:11.529Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T11:58:11.627Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-24T11:59:13.502Z"}
+{"level":"info","message":"Fetched all employees: 1","timestamp":"2025-09-24T11:59:13.687Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-24T11:59:13.690Z"}
+{"level":"info","message":"Fetched all employees: 1","timestamp":"2025-09-24T11:59:13.693Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T12:01:38.291Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T12:01:38.366Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-24T12:02:58.677Z"}
+{"level":"info","message":"Fetched all employees: 1","timestamp":"2025-09-24T12:02:58.759Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-24T12:02:58.762Z"}
+{"level":"info","message":"Fetched all employees: 1","timestamp":"2025-09-24T12:02:58.767Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T12:03:20.485Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T12:03:20.495Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-24T12:03:26.644Z"}
+{"level":"info","message":"Fetched all employees: 1","timestamp":"2025-09-24T12:03:26.648Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-24T12:03:26.652Z"}
+{"level":"info","message":"Fetched all employees: 1","timestamp":"2025-09-24T12:03:26.654Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-24T12:03:35.119Z"}
+{"level":"info","message":"Fetched all employees: 1","timestamp":"2025-09-24T12:03:35.121Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-24T12:03:35.128Z"}
+{"level":"info","message":"Fetched all employees: 1","timestamp":"2025-09-24T12:03:35.130Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T12:04:23.072Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T12:04:23.292Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-24T12:04:27.559Z"}
+{"level":"info","message":"Fetched all employees: 1","timestamp":"2025-09-24T12:04:27.563Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-24T12:04:27.567Z"}
+{"level":"info","message":"Fetched all employees: 1","timestamp":"2025-09-24T12:04:27.569Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T12:05:12.884Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T12:05:12.953Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T12:05:31.434Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T12:05:31.504Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T12:05:40.536Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T12:05:40.555Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T12:05:40.923Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T12:05:40.936Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-24T12:07:41.468Z"}
+{"level":"info","message":"Fetched all employees: 1","timestamp":"2025-09-24T12:07:41.552Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-24T12:07:41.558Z"}
+{"level":"info","message":"Fetched all employees: 1","timestamp":"2025-09-24T12:07:41.560Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-24T12:08:01.357Z"}
+{"level":"info","message":"Fetched all employees: 1","timestamp":"2025-09-24T12:08:01.446Z"}
+{"level":"info","message":"Controller: Get All Employees","timestamp":"2025-09-24T12:08:01.449Z"}
+{"level":"info","message":"Fetched all employees: 1","timestamp":"2025-09-24T12:08:01.454Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T12:08:26.112Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T12:08:26.225Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T12:09:56.320Z"}
+{"level":"info","message":"Controller: Get All Leads","timestamp":"2025-09-24T12:09:56.392Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-24T12:11:21.240Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-24T12:11:34.878Z"}
+{"level":"info","message":"Server running ---- from server.ts","timestamp":"2025-09-24T12:11:48.286Z"}

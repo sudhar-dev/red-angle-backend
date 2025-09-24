@@ -46,12 +46,15 @@ export class leadsRepository {
 
     try {
       const res = await client.query(`
-        SELECT 
-          id, created_time, full_name, email, phone_number, wedding_type, package, wedding_location, event_dates, "createdAt", "createdBy", "isDelete"
-        FROM public.wedding_leads
-        WHERE "isDelete" = false
-        ORDER BY id ASC
-      `);
+      SELECT 
+        wl.id, wl.created_time, wl.full_name, wl.email, wl.phone_number, wl.wedding_type, wl.package, wl.wedding_location, wl.event_dates, wl."createdAt", wl."createdBy", wl."isDelete"
+      FROM public.wedding_leads wl
+      LEFT JOIN public.lead_assignments la
+        ON wl.id = la.lead_id
+      WHERE wl."isDelete" = false
+        AND la.id IS NULL  -- unassigned leads only
+      ORDER BY wl.id ASC;
+    `);
 
       return res.rows;
     } catch (error) {
@@ -125,6 +128,87 @@ export class leadsRepository {
       await client.query("ROLLBACK");
       logger.error("Repository Error: Add New Lead", error);
       return { success: false, message: "Error adding lead" };
+    } finally {
+      client.release();
+    }
+  }
+
+  // ASSIGN LEADS
+  public async assignLeads(
+    leadIds: number[],
+    employeeIds: number[],
+    assignedBy: string = "system"
+  ) {
+    const client: PoolClient = await getClient();
+
+    try {
+      await client.query("BEGIN");
+
+      for (const leadId of leadIds) {
+        for (const employeeId of employeeIds) {
+          await client.query(
+            `
+            INSERT INTO public.lead_assignments
+              (lead_id, employee_id, assigned_by)
+            VALUES ($1, $2, $3)
+            ON CONFLICT (lead_id, employee_id) DO NOTHING
+            `,
+            [leadId, employeeId, assignedBy]
+          );
+        }
+      }
+
+      await client.query("COMMIT");
+      return { success: true, message: "Leads assigned successfully" };
+    } catch (error) {
+      await client.query("ROLLBACK");
+      logger.error("Repository Error: Assign Leads", error);
+      return { success: false, message: "Error assigning leads" };
+    } finally {
+      client.release();
+    }
+  }
+
+  public async getAssignments() {
+    const client: PoolClient = await getClient();
+    try {
+      const res = await client.query(`
+        SELECT la.id, la.lead_id, la.employee_id, la.assigned_at, la.assigned_by,
+               wl.full_name AS lead_name,
+               e."firstName" AS employee_first, e."lastName" AS employee_last
+        FROM public.lead_assignments la
+        LEFT JOIN public.wedding_leads wl ON la.lead_id = wl.id
+        LEFT JOIN public.employees e ON la.employee_id = e.id
+        ORDER BY la.assigned_at DESC
+      `);
+      return res.rows;
+    } catch (error) {
+      logger.error("Repository Error: Get Assignments", error);
+      return [];
+    } finally {
+      client.release();
+    }
+  }
+
+  public async getAssignedLeads() {
+    const client: PoolClient = await getClient();
+
+    try {
+      const res = await client.query(`
+      SELECT 
+        wl.id, wl.full_name, wl.email, wl.phone_number, wl.wedding_type, wl.package, wl.wedding_location, wl.event_dates,
+        la.employee_id, la.assigned_at, la.assigned_by
+      FROM public.wedding_leads wl
+      INNER JOIN public.lead_assignments la
+        ON wl.id = la.lead_id
+      WHERE wl."isDelete" = false
+      ORDER BY la.assigned_at DESC;
+    `);
+
+      return res.rows;
+    } catch (error) {
+      logger.error("Repository Error: Get Assigned Leads", error);
+      return [];
     } finally {
       client.release();
     }
