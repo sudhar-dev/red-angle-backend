@@ -42,6 +42,18 @@ export class leadsRoutes implements IRoute {
         handler: controller.getAssignedLeadsV1,
         config: { auth: false },
       },
+      {
+        method: "POST",
+        path: "/api/v1/leads/bookEvent",
+        handler: controller.bookEventV1,
+        config: { auth: false },
+      },
+      {
+        method: "GET",
+        path: "/api/v1/leads/booked",
+        handler: controller.getBookedEventsV1,
+        config: { auth: false },
+      },
     ]);
   }
 }

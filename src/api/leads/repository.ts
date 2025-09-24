@@ -202,12 +202,118 @@ export class leadsRepository {
       INNER JOIN public.lead_assignments la
         ON wl.id = la.lead_id
       WHERE wl."isDelete" = false
+        AND NOT EXISTS (
+          SELECT 1 FROM public.events e
+          WHERE e.lead_id = wl.id
+        )
       ORDER BY la.assigned_at DESC;
     `);
 
       return res.rows;
     } catch (error) {
       logger.error("Repository Error: Get Assigned Leads", error);
+      return [];
+    } finally {
+      client.release();
+    }
+  }
+
+  public async bookEventRepo(payload: any) {
+    const client: PoolClient = await getClient();
+
+    try {
+      await client.query("BEGIN");
+
+      const { leadId, eventDetails, paymentDetails } = payload;
+
+      // 1️⃣ Insert into events
+      const resEvent = await client.query(
+        `
+      INSERT INTO public.events
+        (lead_id, event_name, date_time, highlights, notes, created_at)
+      VALUES ($1, $2, $3, $4, $5, NOW())
+      RETURNING id
+      `,
+        [
+          leadId,
+          eventDetails.eventName,
+          eventDetails.dateTime,
+          eventDetails.highlights,
+          eventDetails.notes,
+        ]
+      );
+
+      const eventId = resEvent.rows[0].id;
+
+      // 2️⃣ Insert into payments
+      await client.query(
+        `
+      INSERT INTO public.payments
+        (event_id, payment_type, amount, payment_date, notes, created_at)
+      VALUES ($1, $2, $3, $4, $5, NOW())
+      `,
+        [
+          eventId,
+          paymentDetails.paymentType,
+          paymentDetails.amount,
+          paymentDetails.date,
+          paymentDetails.notes,
+        ]
+      );
+
+      await client.query("COMMIT");
+
+      return { success: true, message: "Event & Payment stored successfully" };
+    } catch (error) {
+      await client.query("ROLLBACK");
+      logger.error("Repository Error: Book Event", error);
+      return { success: false, message: "Error saving event & payment" };
+    } finally {
+      client.release();
+    }
+  }
+
+  public async getBookedEventsRepo() {
+    const client: PoolClient = await getClient();
+
+    try {
+      const res = await client.query(`
+      SELECT 
+        wl.id AS lead_id,
+        wl.full_name,
+        wl.email,
+        wl.phone_number,
+        wl.wedding_type,
+        wl.package,
+        wl.wedding_location,
+        wl.event_dates,
+        
+        e.id AS event_id,
+        e.event_name,
+        e.date_time,
+        e.highlights,
+        e.notes AS event_notes,
+        e.created_at AS event_created_at,
+        
+        p.id AS payment_id,
+        p.payment_type,
+        p.amount,
+        p.payment_date,
+        p.notes AS payment_notes,
+        p.created_at AS payment_created_at
+        
+      FROM public.wedding_leads wl
+      INNER JOIN public.events e
+        ON wl.id = e.lead_id
+      LEFT JOIN public.payments p
+        ON e.id = p.event_id
+      WHERE wl."isDelete" = false
+      ORDER BY e.created_at DESC;
+    `);
+
+      return res.rows;
+    } catch (error) {
+      logger.error("Repository Error: Get Booked Events", error);
       return [];
     } finally {
       client.release();

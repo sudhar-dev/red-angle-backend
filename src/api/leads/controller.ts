@@ -102,4 +102,38 @@ export class leadsController {
         .code(500);
     }
   };
+  public bookEventV1 = async (request: any, h: Hapi.ResponseToolkit) => {
+    try {
+      const payload = request.payload;
+
+      if (!payload.leadId || !payload.eventDetails || !payload.paymentDetails) {
+        return h
+          .response({
+            success: false,
+            message: "leadId, eventDetails, and paymentDetails are required",
+          })
+          .code(400);
+      }
+
+      const result = await this.repo.bookEventRepo(payload);
+      return h.response(result).code(result.success ? 200 : 400);
+    } catch (error) {
+      logger.error("Controller Error: Book Event", error);
+      return h
+        .response({ success: false, message: "Internal server error" })
+        .code(500);
+    }
+  };
+
+  public getBookedEventsV1 = async (_request: any, h: Hapi.ResponseToolkit) => {
+    try {
+      const result = await this.repo.getBookedEventsRepo();
+      return h.response({ success: true, data: result }).code(200);
+    } catch (error) {
+      logger.error("Controller Error: Get Booked Events", error);
+      return h
+        .response({ success: false, message: "Internal server error" })
+        .code(500);
+    }
+  };
 }
