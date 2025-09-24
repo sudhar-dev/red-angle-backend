@@ -31,4 +31,19 @@ export class leadsController {
         .code(500);
     }
   };
+
+  public addNewLeadV1 = async (request: any, h: Hapi.ResponseToolkit) => {
+    logger.info("Controller: Add New Lead");
+
+    try {
+      const formData = request.payload;
+      const result = await this.repo.addNewLead(formData);
+      return h.response(result).code(result.success ? 200 : 400);
+    } catch (error) {
+      logger.error("Controller Error: Add New Lead", error);
+      return h
+        .response({ success: false, message: "Internal Server Error" })
+        .code(500);
+    }
+  };
 }

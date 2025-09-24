@@ -12,7 +12,7 @@ export class attendanceRepository {
     try {
       const now = new Date();
       const today = now.toISOString().split("T")[0]; // yyyy-mm-dd
-      const punchInTime = now.toISOString();
+      const punchInTime = now.toLocaleString("en-IN", { hour12: false });
 
       const query = `
         INSERT INTO public.employee_attendance 
@@ -57,7 +57,7 @@ export class attendanceRepository {
     try {
       const now = new Date();
       const today = now.toISOString().split("T")[0]; // yyyy-mm-dd
-      const punchOutTime = now.toISOString();
+      const punchOutTime = now.toLocaleString("en-IN", { hour12: false });
 
       // Get today's punch in record
       const fetchQuery = `
