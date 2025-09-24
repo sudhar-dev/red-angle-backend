@@ -308,12 +308,111 @@ export class leadsRepository {
       LEFT JOIN public.payments p
         ON e.id = p.event_id
       WHERE wl."isDelete" = false
+        AND NOT EXISTS (
+          SELECT 1
+          FROM public.quotation_packages qp
+          WHERE qp.event_id = e.id
+        )
       ORDER BY e.created_at DESC;
     `);
 
       return res.rows;
     } catch (error) {
       logger.error("Repository Error: Get Booked Events", error);
+      return [];
+    } finally {
+      client.release();
+    }
+  }
+
+  public async addQuotationPackagesRepo({ leadId, eventId, packages }: any) {
+    const client: PoolClient = await getClient();
+    try {
+      await client.query("BEGIN");
+
+      for (const pkg of packages) {
+        await client.query(
+          `
+        INSERT INTO public.quotation_packages
+          (lead_id, event_id, service_name, description, quantity, price, created_at, created_by)
+        VALUES
+          ($1, $2, $3, $4, $5, $6, NOW(), 'system')
+        `,
+          [
+            leadId,
+            eventId,
+            pkg.serviceName,
+            pkg.description,
+            pkg.quantity,
+            pkg.price,
+          ]
+        );
+      }
+
+      await client.query("COMMIT");
+      return {
+        success: true,
+        message: "Quotation packages saved successfully",
+      };
+    } catch (error) {
+      await client.query("ROLLBACK");
+      logger.error("Repository Error: Add Quotation Packages", error);
+      return { success: false, message: "Error saving quotation packages" };
+    } finally {
+      client.release();
+    }
+  }
+
+  public async getQuotationCreatedLeadsRepo() {
+    const client: PoolClient = await getClient();
+
+    try {
+      const res = await client.query(`
+      SELECT 
+        wl.id AS lead_id,
+        wl.full_name,
+        wl.email,
+        wl.phone_number,
+        wl.wedding_type,
+        wl.package,
+        wl.wedding_location,
+        wl.event_dates,
+        
+        e.id AS event_id,
+        e.event_name,
+        e.date_time,
+        e.highlights,
+        e.notes AS event_notes,
+        e.created_at AS event_created_at,
+        
+        p.id AS payment_id,
+        p.payment_type,
+        p.amount,
+        p.payment_date,
+        p.notes AS payment_notes,
+        p.created_at AS payment_created_at,
+        
+        qp.id AS quotation_package_id,
+        qp.service_name,
+        qp.description,
+        qp.quantity,
+        qp.price,
+        qp.created_at AS quotation_created_at
+
+      FROM public.wedding_leads wl
+      INNER JOIN public.events e
+        ON wl.id = e.lead_id
+      LEFT JOIN public.payments p
+        ON e.id = p.event_id
+      INNER JOIN public.quotation_packages qp
+        ON e.id = qp.event_id
+      WHERE wl."isDelete" = false
+      ORDER BY e.created_at DESC;
+    `);
+
+      return res.rows;
+    } catch (error) {
+      logger.error("Repository Error: Get Quotation Created Leads", error);
       return [];
     } finally {
       client.release();

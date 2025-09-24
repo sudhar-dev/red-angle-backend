@@ -54,6 +54,19 @@ export class leadsRoutes implements IRoute {
         handler: controller.getBookedEventsV1,
         config: { auth: false },
       },
+      {
+        method: "POST",
+        path: "/api/v1/leads/quotationPackages",
+        handler: controller.addQuotationPackagesV1,
+        config: { auth: false },
+      },
+
+      {
+        method: "GET",
+        path: "/api/v1/leads/quotation-created",
+        handler: controller.getQuotationCreatedLeadsV1,
+        config: { auth: false },
+      },
     ]);
   }
 }

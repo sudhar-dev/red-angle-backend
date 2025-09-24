@@ -136,4 +136,49 @@ export class leadsController {
         .code(500);
     }
   };
+
+  public addQuotationPackagesV1 = async (
+    request: any,
+    h: Hapi.ResponseToolkit
+  ) => {
+    try {
+      const { leadId, eventId, packages } = request.payload;
+
+      if (!leadId || !eventId || !Array.isArray(packages)) {
+        return h
+          .response({
+            success: false,
+            message: "leadId, eventId and packages are required",
+          })
+          .code(400);
+      }
+
+      const result = await this.repo.addQuotationPackagesRepo({
+        leadId,
+        eventId,
+        packages,
+      });
+      return h.response(result).code(result.success ? 200 : 400);
+    } catch (error) {
+      logger.error("Controller Error: Add Quotation Packages", error);
+      return h
+        .response({ success: false, message: "Internal server error" })
+        .code(500);
+    }
+  };
+
+  public getQuotationCreatedLeadsV1 = async (
+    _request: any,
+    h: Hapi.ResponseToolkit
+  ) => {
+    try {
+      const result = await this.repo.getQuotationCreatedLeadsRepo();
+      return h.response({ success: true, data: result }).code(200);
+    } catch (error) {
+      logger.error("Controller Error: Get Quotation Created Leads", error);
+      return h
+        .response({ success: false, message: "Internal server error" })
+        .code(500);
+    }
+  };
 }
